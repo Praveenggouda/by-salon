@@ -1963,6 +1963,132 @@ h1 em, h2 em {
 }
 
 
+/* ===== CUSTOMER REVIEWS ===== */
+
+.reviews-section {
+  background: var(--beige);
+}
+
+.reviews-heading {
+  max-width: 700px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.reviews-heading h2 {
+  margin: 18px 0 14px;
+  font-size: clamp(34px, 4vw, 49px);
+}
+
+.reviews-heading > p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.review-card {
+  padding: 28px 25px;
+  border: 1px solid var(--line);
+  background: var(--cream);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px #30272710;
+}
+
+.review-stars {
+  color: var(--rose-dark);
+  font-size: 18px;
+  letter-spacing: 4px;
+}
+
+.review-text {
+  min-height: 110px;
+  margin: 20px 0 24px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.review-customer {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.review-avatar {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  background: var(--rose-light);
+  color: var(--rose-dark);
+  font-family: var(--serif);
+  font-size: 20px;
+}
+
+.review-customer h3 {
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.review-customer span {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.reviews-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 38px;
+}
+
+.reviews-footer > p {
+  color: var(--rose-dark);
+  font-family: var(--serif);
+  font-size: 19px;
+  font-style: italic;
+}
+
+@media (max-width: 800px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+  }
+
+  .review-text {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .reviews-heading {
+    text-align: left;
+  }
+
+  .reviews-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
 
 
 
@@ -3990,6 +4116,88 @@ h1 em, h2 em {
                <span id="styleDetailPrice"></span></p><a id="styleBookButton" class="button button-primary" href="#" target="_blank" rel="noopener noreferrer">Enquire on WhatsApp ↗</a></div></div>
 
     </section>
+    
+<!-- CUSTOMER REVIEWS -->
+<section class="reviews-section section-padding" id="reviews">
+  <div class="reviews-heading">
+    <span class="eyebrow">
+      <span class="eyebrow-line"></span>
+      KIND WORDS, REAL EXPERIENCES
+    </span>
+
+    <h2>Love from our <em>customers</em></h2>
+
+    <p>Every visit is special. Here's what our customers have to say.</p>
+  </div>
+
+  <div class="reviews-grid">
+
+    <article class="review-card">
+      <div class="review-stars" aria-label="5 out of 5 stars">
+        ★★★★★
+      </div>
+      <p class="review-text">
+        “A lovely salon experience! The team was friendly and made me feel
+        comfortable. I really enjoyed the service.”
+      </p>
+      <div class="review-customer">
+        <div class="review-avatar">A</div>
+        <div>
+          <h3>Happy Customer</h3>
+          <span>Salon Experience</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="review-card">
+      <div class="review-stars" aria-label="5 out of 5 stars">
+        ★★★★★
+      </div>
+      <p class="review-text">
+        “The staff were welcoming and attentive. I appreciated the care
+        and attention given to the little details.”
+      </p>
+      <div class="review-customer">
+        <div class="review-avatar">S</div>
+        <div>
+          <h3>Satisfied Customer</h3>
+          <span>Beauty &amp; Grooming</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="review-card">
+      <div class="review-stars" aria-label="5 out of 5 stars">
+        ★★★★★
+      </div>
+      <p class="review-text">
+        “A comfortable atmosphere and a pleasant visit. Looking forward
+        to coming back for another salon service.”
+      </p>
+      <div class="review-customer">
+        <div class="review-avatar">R</div>
+        <div>
+          <h3>Valued Customer</h3>
+          <span>Salon Visit</span>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="reviews-footer">
+    <p>Your experience matters to us ♡</p>
+    <a
+      href="https://www.google.com/maps/search/?api=1&query=B%26Y%20Unisex%20Salon%2C%20Belathur%2C%20Kadugodi%2C%20Bengaluru"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="button button-primary"
+    >
+      Find Us on Google <span>↗</span>
+    </a>
+  </div>
+</section>
+
 
     <section class="experience"><div class="experience-image"></div><div class="experience-copy"><span class="eyebrow"><span class="eyebrow-line"></span> YOUR MOMENT, YOUR STYLE</span><h2>Come as you are.<br>Leave feeling <em>amazing.</em></h2><p>Whether it's your regular refresh or a special day, we're here to help you feel confident in your own style.</p>
 <a
